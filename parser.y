@@ -4,6 +4,9 @@
 #include <vector>
 #include <string>
 
+#include "main.h"
+#include "variable.h"
+
 extern int yylex();
 void yyerror(const char*);
 %}

@@ -3,6 +3,8 @@
 #include <cstring>
 #include <vector>
 
+#include "variable.h"
+#include "parser.hpp"
 %}
 
 %option nounput
