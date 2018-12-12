@@ -8,3 +8,8 @@ std::string label_auto()
 	auto_counter++;
 	return "label" + std::to_string(auto_counter);
 }
+
+int main()
+{
+	yyparse();
+}

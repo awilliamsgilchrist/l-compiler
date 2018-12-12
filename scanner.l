@@ -3,7 +3,7 @@
 #include <cstring>
 #include <vector>
 
-#include "variable.h"
+#include "../variable.h"
 #include "parser.hpp"
 %}
 
@@ -18,12 +18,12 @@ ifneqz|IFNEQZ {return NEQZSY;}
 goto|GOTO {return GOTOSY;}
 "<-" {return PRODSY;}
 
-[X][1-9][0-9]* {yylval.ctsr_val = stdup(yytext); return INPUTSY;}
-[Z][1-9][0-9]* {yylval.cstr_val = stdup(yytext); return LOCALSY;}
-Y {yylval.cstr_val = stdup(yytext); return OUTPUTSY;}
+[X][1-9][0-9]* {yylval.cstr_val = strdup(yytext); return INPUTSY;}
+[Z][1-9][0-9]* {yylval.cstr_val = strdup(yytext); return LOCALSY;}
+Y {yylval.cstr_val = strdup(yytext); return OUTPUTSY;}
 
-[A-D][1-9][0-9]* {yylval.cstr_val = stdup(yytext); return LABELSY;}
-E {yylval.cstr_val = stdup(yytext); return LABELSY;}
+[A-D][1-9][0-9]* {yylval.cstr_val = strdup(yytext); return LABELSY;}
+E {yylval.cstr_val = strdup(yytext); return LABELSY;}
 
 '\n' {return DELIMSY;}
 ':' {return COLONSY;}

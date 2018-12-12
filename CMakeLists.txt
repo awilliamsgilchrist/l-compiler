@@ -20,7 +20,7 @@ set(l-compiler_srcs
 	${BISON_Parser_OUTPUTS}
 	${FLEX_Scanner_OUTPUTS}
 )
-source_groupd("Calc" FILES ${l-compiler_srcs})
+source_group("Calc" FILES ${l-compiler_srcs})
 
 add_executable(l-compiler ${l-compiler_srcs})
 target_link_libraries(l-compiler ${FLEX_LIBRARIES} ${BISON_LIBRARIES})

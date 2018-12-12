@@ -15,7 +15,7 @@ class Variable
 	Variable(int offset)
 	{
 		isLoaded= false;
-		isSpilled = flase;
+		isSpilled = false;
 		regist = "";
 		globalOffset = offset;
 		stackOffset = 0;
